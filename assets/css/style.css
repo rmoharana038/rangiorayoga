@@ -575,10 +575,10 @@ h2 {
     }
 
     .main-navigation li {
-        margin: 5px 0 5px auto; /* Adjusted margin to push to right */
+        margin: 2px 0 2px auto; /* Adjusted margin to push to right and reduce vertical space */
         background-color: black;
         border-radius: 20px;
-        padding: 10px 15px;
+        padding: 5px 10px; /* Reduced padding */
         width: auto; /* Allow item to shrink to content */
     }
 
