@@ -259,8 +259,8 @@ h2 {
     padding: 40px;
     border-radius: 10px;
     border: 1px solid #555; /* Darker border */
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15); /* Lighter shadow */
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 8px 20px rgba(255, 255, 255, 0.15); /* Blue LED glow + existing shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -322,8 +322,8 @@ h2 {
     padding: 40px;
     border-radius: 10px;
     border: 1px solid #555; /* Darker border */
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15); /* Lighter shadow */
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 8px 20px rgba(255, 255, 255, 0.15); /* Blue LED glow + existing shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
     position: relative;
     overflow: hidden;
     z-index: 1;
