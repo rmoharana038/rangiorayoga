@@ -503,10 +503,41 @@ h2 {
 .pricing-section ul {
     list-style: none;
     padding: 0;
+    text-align: left; /* Align list items to the left */
+    margin-bottom: 20px;
 }
 
 .pricing-section li {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased space between list items */
+    padding: 10px;
+    background-color: #f8f8f8; /* Light background for each item */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary-blue); /* Accent border */
+}
+
+.pricing-section li strong {
+    color: var(--primary-blue); /* Highlight strong text */
+}
+
+.pricing-section ul ul {
+    margin-top: 10px;
+    margin-left: 20px; /* Indent nested lists */
+    list-style: disc; /* Use disc for nested lists */
+}
+
+.pricing-section ul ul li {
+    background-color: transparent; /* No background for nested items */
+    box-shadow: none;
+    border-left: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.pricing-content {
+    text-align: left; /* Ensure content within this div is left-aligned */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content block */
 }
 
 /* Footer */
