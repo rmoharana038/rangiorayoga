@@ -253,15 +253,23 @@ h2 {
 }
 
 .class-card {
-    background-color: var(--bg-white);
+    background-color: #333; /* Dark background */
     padding: 40px;
     border-radius: 10px;
-    border: 1px solid var(--border-light); /* Added border */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    border: 1px solid #555; /* Darker border */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15); /* Lighter shadow */
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
     z-index: 1;
+}
+
+.class-card h3 {
+    color: var(--text-light); /* Light text for headings */
+}
+
+.class-card p {
+    color: var(--text-light); /* Light text for paragraphs */
 }
 
 .class-card::before {
@@ -308,15 +316,20 @@ h2 {
 }
 
 .testimonial-card {
-    background-color: var(--bg-white);
+    background-color: #333; /* Dark background */
     padding: 40px;
     border-radius: 10px;
-    border: 1px solid var(--border-light); /* Added border */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    border: 1px solid #555; /* Darker border */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15); /* Lighter shadow */
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
     z-index: 1;
+}
+
+.testimonial-card p,
+.testimonial-card cite {
+    color: var(--text-light); /* Light text for paragraphs and cite */
 }
 
 .testimonial-card::before {
