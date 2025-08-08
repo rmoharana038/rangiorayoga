@@ -571,14 +571,15 @@ h2 {
     .main-navigation ul {
         flex-direction: column; /* Ensure vertical stacking */
         width: 100%; /* Ensure full width */
+        align-items: flex-end;
     }
 
     .main-navigation li {
-        margin: 5px 0; /* Adjusted margin */
-        text-align: right;
+        margin: 5px 0 5px auto; /* Adjusted margin to push to right */
         background-color: black;
         border-radius: 20px;
-        padding: 2px;
+        padding: 10px 15px;
+        width: auto; /* Allow item to shrink to content */
     }
 
     .menu-toggle {
