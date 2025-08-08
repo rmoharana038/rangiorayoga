@@ -555,12 +555,12 @@ h2 {
         flex-direction: column;
         position: absolute;
         top: 100%; /* Position below the header */
-        left: 0;
-        width: 100%;
-        background-color: var(--bg-white);
-        box-shadow: 0 5px 15px var(--shadow-light);
+        right: 0;
+        width: 50%;
+        background-color: transparent;
+        box-shadow: none;
         padding: 20px 0;
-        border-top: 1px solid var(--border-light);
+        border-top: none;
         z-index: 999; /* Added z-index */
     }
 
