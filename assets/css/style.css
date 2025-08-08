@@ -574,11 +574,11 @@ h2 {
     }
 
     .main-navigation li {
-        margin: 10px 0; /* Adjusted margin */
-        text-align: center;
+        margin: 5px 0; /* Adjusted margin */
+        text-align: right;
         background-color: black;
         border-radius: 20px;
-        padding: 5px;
+        padding: 2px;
     }
 
     .menu-toggle {
