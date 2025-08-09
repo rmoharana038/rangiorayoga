@@ -533,7 +533,8 @@ h2 {
 
 #testimonial-image {
     width: 100%;
-    height: auto;
+    height: 500px; /* Set a fixed height */
+    object-fit: cover; /* Crop the image to fit the container */
     border-radius: 5px;
 }
 
