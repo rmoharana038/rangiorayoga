@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "assets/images/uploads/studio/IMG_2183.jpeg",
         "assets/images/uploads/studio/974DEB3E-6C86-4C33-97E6-14C461756C41.jpeg",
         "assets/images/uploads/yoga/p6-2-1.jpg",
-        "assets/images/uploads/yoga/p16-1.jpg",
+        
         "assets/images/uploads/yoga/p12-1.jpg",
         "assets/images/uploads/yoga/p11-1.jpg",
         "assets/images/uploads/yoga/P3-1.jpg",
