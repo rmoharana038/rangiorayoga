@@ -487,6 +487,38 @@ h2 {
     padding: 80px 0;
 }
 
+.why-yoga-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.why-yoga-column h2 {
+    text-align: left;
+}
+
+.why-yoga-column ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.why-yoga-column ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.why-yoga-column ul li i {
+    color: var(--primary-green);
+    margin-right: 10px;
+}
+
+.why-yoga-column p {
+    text-align: left;
+}
+
 /*--------------------------------------------------------------
 # Pricing Page
 --------------------------------------------------------------*/
