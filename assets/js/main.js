@@ -52,4 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Testimonial Slider
+    const sliderTrack = document.querySelector('.slider-track');
+    if (sliderTrack) {
+        const slides = Array.from(sliderTrack.children);
+        slides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            sliderTrack.appendChild(clone);
+        });
+    }
 });
