@@ -64,7 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
         "assets/images/yoga/yoga-2.png",
         "assets/images/yoga/yoga-3.png",
         "assets/images/yoga/yoga-4.png",
+        "assets/images/yoga/yoga-5.png",
+        "assets/images/yoga/yoga-6.png",
+        "assets/images/yoga/yoga-7.png",
+        "assets/images/yoga/yoga-8.png",
         "assets/images/yoga/yoga-9.png",
+        "assets/images/yoga/yoga-10.png",
         "assets/images/yoga/yoga-11.png",
         "assets/images/yoga/yoga-12.png"
     ];
