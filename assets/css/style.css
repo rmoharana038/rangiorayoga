@@ -650,7 +650,8 @@ h2 {
 
 .site-footer .container {
     display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space out items */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items horizontally */
     align-items: center; /* Vertically center items */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
@@ -829,4 +830,9 @@ h2 {
     height: 500px; /* Fixed height */
     object-fit: contain; /* Ensure images are not cropped */
     border-radius: 5px;
+}
+
+.copyright-text {
+    text-align: center;
+    width: 100%; /* Ensure it takes full width to center properly */
 }
