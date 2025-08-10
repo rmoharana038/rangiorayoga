@@ -837,3 +837,10 @@ h2 {
     text-align: center;
     width: 100%; /* Ensure it takes full width to center properly */
 }
+
+.professional-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555; /* A softer black */
+    margin-bottom: 50px; /* Add margin bottom for spacing */
+}
