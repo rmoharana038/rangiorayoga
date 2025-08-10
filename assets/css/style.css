@@ -659,6 +659,7 @@ h2 {
 .social-links {
     display: flex; /* Use flexbox for social icons */
     align-items: center; /* Vertically center icons */
+    justify-content: center; /* Horizontally center icons */
 }
 
 .social-links a {
