@@ -55,24 +55,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Testimonial Slider
     const imageUrls = [
-        "assets/images/uploads/studio/Screen-Shot-2019-02-07-at-8.12.52-PM.png",
-        "assets/images/uploads/studio/IMG_3759.jpeg",
-        "assets/images/uploads/studio/IMG_3734.jpeg",
-        "assets/images/uploads/studio/IMG_3733.jpeg",
-        "assets/images/uploads/studio/IMG_2183.jpeg",
-        "assets/images/uploads/studio/974DEB3E-6C86-4C33-97E6-14C461756C41.jpeg",
-        "assets/images/uploads/yoga/p6-2-1.jpg",
-        
-        "assets/images/uploads/yoga/p12-1.jpg",
-        "assets/images/uploads/yoga/p11-1.jpg",
-        "assets/images/uploads/yoga/P3-1.jpg",
-        "assets/images/uploads/yoga/P1500119-1.jpg",
-        "assets/images/uploads/yoga/P1500096-1.jpg",
-        "assets/images/uploads/yoga/IMG_7891.jpeg",
-        "assets/images/uploads/yoga/IMG_3635.jpeg",
-        "assets/images/uploads/yoga/ACC7829C-BF08-4BFD-8579-236BC5488711.jpeg",
-        "assets/images/uploads/yoga/70770253_2449622731941572_3583263680017465344_n.jpg",
-        "assets/images/uploads/yoga/0556EA28-EBED-4C33-97FB-6583A4E614D5.jpeg"
+        "assets/images/studio/studio-1.png",
+        "assets/images/studio/studio-2.png",
+        "assets/images/studio/studio-3.png",
+        "assets/images/studio/studio-4.png",
+        "assets/images/studio/studio-5.png",
+        "assets/images/yoga/yoga-1.png",
+        "assets/images/yoga/yoga-2.png",
+        "assets/images/yoga/yoga-3.png",
+        "assets/images/yoga/yoga-4.png",
+        "assets/images/yoga/yoga-5.png",
+        "assets/images/yoga/yoga-6.png",
+        "assets/images/yoga/yoga-7.png",
+        "assets/images/yoga/yoga-8.png",
+        "assets/images/yoga/yoga-9.png",
+        "assets/images/yoga/yoga-10.png",
+        "assets/images/yoga/yoga-11.png",
+        "assets/images/yoga/yoga-12.png"
     ];
 
     const testimonialImage = document.getElementById('testimonial-image');
