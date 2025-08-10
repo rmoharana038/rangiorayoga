@@ -1,12 +1,30 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+async function loadHTML(url, elementId) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const html = await response.text();
+        document.getElementById(elementId).innerHTML = html;
+    } catch (error) {
+        console.error(`Could not load ${url}:`, error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async function() {
+    await loadHTML('header.html', 'header-placeholder');
+    await loadHTML('footer.html', 'footer-placeholder');
+
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNavigation = document.querySelector('.main-navigation');
     const logo = document.querySelector('.logo');
 
-    menuToggle.addEventListener('click', function() {
-        mainNavigation.classList.toggle('toggled');
-    });
+    if (menuToggle && mainNavigation) { // Check if elements exist after loading
+        menuToggle.addEventListener('click', function() {
+            mainNavigation.classList.toggle('toggled');
+        });
+    }
 
     AOS.init();
 
