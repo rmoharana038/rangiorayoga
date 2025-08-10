@@ -53,23 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Testimonial Slider
+    // Testimonial Slider (Horizontal Images)
     const imageUrls = [
         "assets/images/studio/studio-1.png",
         "assets/images/studio/studio-2.png",
         "assets/images/studio/studio-3.png",
-        "assets/images/studio/studio-4.png",
-        "assets/images/studio/studio-5.png",
         "assets/images/yoga/yoga-1.png",
         "assets/images/yoga/yoga-2.png",
         "assets/images/yoga/yoga-3.png",
         "assets/images/yoga/yoga-4.png",
-        "assets/images/yoga/yoga-5.png",
-        "assets/images/yoga/yoga-6.png",
-        "assets/images/yoga/yoga-7.png",
-        "assets/images/yoga/yoga-8.png",
         "assets/images/yoga/yoga-9.png",
-        "assets/images/yoga/yoga-10.png",
         "assets/images/yoga/yoga-11.png",
         "assets/images/yoga/yoga-12.png"
     ];
@@ -86,5 +79,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (testimonialImage) {
         setInterval(changeImage, 3000); // Change image every 3 seconds
+    }
+
+    // Vertical Images Slider
+    const verticalImageUrls = [
+        "assets/images/studio/studio-4.png",
+        "assets/images/studio/studio-5.png",
+        "assets/images/yoga/yoga-5.png",
+        "assets/images/yoga/yoga-6.png",
+        "assets/images/yoga/yoga-7.png",
+        "assets/images/yoga/yoga-8.png",
+        "assets/images/yoga/yoga-10.png"
+    ];
+
+    const verticalTestimonialImage = document.getElementById('vertical-testimonial-image');
+    let currentVerticalImageIndex = 0;
+
+    function changeVerticalImage() {
+        if (verticalTestimonialImage) {
+            verticalTestimonialImage.src = verticalImageUrls[currentVerticalImageIndex];
+            currentVerticalImageIndex = (currentVerticalImageIndex + 1) % verticalImageUrls.length;
+        }
+    }
+
+    if (verticalTestimonialImage) {
+        setInterval(changeVerticalImage, 3000); // Change image every 3 seconds
     }
 });

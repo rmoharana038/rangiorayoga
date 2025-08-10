@@ -810,3 +810,23 @@ h2 {
         padding: 5px;
     }
 }
+
+/* Vertical Slider Section */
+.vertical-slider-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.vertical-image-slider-container {
+    width: 100%;
+    max-width: 800px; /* Same as horizontal slider */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#vertical-testimonial-image {
+    width: 100%;
+    height: 500px; /* Fixed height */
+    object-fit: contain; /* Ensure images are not cropped */
+    border-radius: 5px;
+}
