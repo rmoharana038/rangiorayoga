@@ -809,6 +809,10 @@ h2 {
         padding: 20px 0; /* Further reduced vertical padding for all sections on very small screens */
     }
 
+    .testimonials-section {
+        margin-bottom: 0; /* Remove bottom margin to reduce gap to next section */
+    }
+
     .hero-text h1 {
         font-size: 28px; /* Reduced font size for mobile */
         margin-bottom: 5px; /* Reduced margin */
