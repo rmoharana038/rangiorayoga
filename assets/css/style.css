@@ -710,6 +710,10 @@ h2 {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    section {
+        padding: 40px 0; /* Reduced vertical padding for all sections on smaller screens */
+    }
+
     .site-header .container {
         flex-direction: row; /* Keep items in a row */
         justify-content: space-between; /* Space out logo and menu toggle */
@@ -801,6 +805,10 @@ h2 {
 }
 
 @media (max-width: 576px) {
+    section {
+        padding: 20px 0; /* Further reduced vertical padding for all sections on very small screens */
+    }
+
     .hero-text h1 {
         font-size: 28px; /* Reduced font size for mobile */
         margin-bottom: 5px; /* Reduced margin */
