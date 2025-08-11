@@ -199,6 +199,10 @@ main {
     color: var(--light-green); /* Light green color for P */
 }
 
+.highlight-text {
+    color: var(--secondary-orange);
+}
+
 .divider {
     background-color: var(--white-color);
     height: 8px;
