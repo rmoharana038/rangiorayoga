@@ -178,6 +178,7 @@ main {
     background-size: contain; /* Changed to contain */
     background-repeat: no-repeat; /* Added */
     background-position: right; /* Changed to right */
+    background-color: var(--bg-white); /* Added background color */
     color: var(--text-light);
     text-align: center;
     padding: 50px 0; /* Adjusted padding */
@@ -413,7 +414,7 @@ h2 {
 # Contact Page
 --------------------------------------------------------------*/
 .contact-hero {
-    background-color: var(--bg-light);
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
     text-align: center;
     padding: 80px 0;
 }
@@ -450,7 +451,7 @@ h2 {
 # Classes Page
 --------------------------------------------------------------*/
 .classes-hero {
-    background-color: var(--bg-light);
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
     text-align: center;
     padding: 80px 0;
 }
@@ -496,7 +497,7 @@ h2 {
 # About Page
 --------------------------------------------------------------*/
 .about-hero {
-    background-color: var(--bg-light);
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
     text-align: center;
     padding: 80px 0;
 }
@@ -521,7 +522,7 @@ h2 {
 # Why Yoga Page
 --------------------------------------------------------------*/
 .why-yoga-hero {
-    background-color: var(--bg-light);
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
     text-align: center;
     padding: 80px 0;
 }
@@ -634,7 +635,7 @@ h2 {
 # Pricing Page
 --------------------------------------------------------------*/
 .pricing-hero {
-    background-color: var(--bg-light);
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
     text-align: center;
     padding: 80px 0;
 }
