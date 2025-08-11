@@ -217,6 +217,10 @@ main {
     color: var(--secondary-orange);
 }
 
+.blue-highlight {
+    color: var(--primary-blue) !important;
+}
+
 .divider {
     background-color: var(--white-color);
     height: 8px;
