@@ -179,7 +179,15 @@ main {
     margin-bottom: 15px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Stronger shadow */
     letter-spacing: 1.5px;
-    color: var(--secondary-orange); /* Light orange color for H1 */
+    /* Color will be set by .saffron-text or other specific classes */
+}
+
+.saffron-text {
+    color: var(--saffron-color);
+}
+
+.green-text {
+    color: var(--green-color);
 }
 
 .hero-text p {
