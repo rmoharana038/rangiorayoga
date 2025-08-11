@@ -311,6 +311,39 @@ h2 {
     padding: 80px 0;
 }
 
+.reviews-carousel {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to images */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    gap: 20px; /* Space between images */
+    padding-bottom: 20px; /* Space for scrollbar */
+    margin-bottom: 40px; /* Space below the carousel */
+}
+
+.reviews-carousel img {
+    flex: 0 0 auto; /* Prevent images from shrinking */
+    width: 100%; /* Default width for images */
+    max-width: 400px; /* Max width for desktop */
+    height: auto; /* Maintain aspect ratio */
+    scroll-snap-align: start; /* Snap to the start of each image */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive adjustments for reviews-carousel */
+@media (max-width: 768px) {
+    .reviews-carousel img {
+        max-width: 300px; /* Adjust max width for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews-carousel img {
+        max-width: 250px; /* Adjust max width for mobile */
+    }
+}
+
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
