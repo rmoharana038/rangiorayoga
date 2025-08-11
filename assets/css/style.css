@@ -282,6 +282,10 @@ h2 {
     color: var(--text-light); /* Light text for headings */
 }
 
+.class-card h3.highlight-text {
+    color: var(--secondary-orange); /* Highlight color for headings in class cards */
+}
+
 .class-card p {
     color: var(--text-light); /* Light text for paragraphs */
 }
