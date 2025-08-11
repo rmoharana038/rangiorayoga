@@ -814,8 +814,8 @@ h2 {
     }
 
     .review-slider-container {
-        margin-top: 10px; /* Reduce space before the slider */
-        margin-bottom: 10px; /* Reduce space after the slider */
+        margin-top: 0; /* Further reduce space before the slider */
+        margin-bottom: 0; /* Further reduce space after the slider */
     }
 
     .hero-text h1 {
