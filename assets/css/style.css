@@ -822,25 +822,30 @@ h2 {
     }
 
     .family-yoga-carousel {
-        display: flex; /* Override desktop display for mobile */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        scroll-snap-type: x mandatory; /* Snap to images */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-        gap: 10px; /* Space between images */
-        padding-bottom: 10px; /* Space for scrollbar */
-        margin-top: 10px; /* Reduce space before the slider */
-        margin-bottom: 10px; /* Reduce space after the slider */
+        display: block; /* Change to block for auto-slide */
+        overflow: hidden; /* Hide images outside the current view */
+        position: relative; /* For absolute positioning of images */
+        width: 100%;
+        max-width: 800px; /* Match desktop max-width for consistency */
+        height: 500px; /* Fixed height for the slider frame */
+        margin: 0 auto; /* Center the slider */
     }
 
     .family-yoga-carousel img {
-        display: block; /* Show all images on mobile */
-        flex: 0 0 auto; /* Prevent images from shrinking */
-        width: 100%; /* Default width for images */
-        max-width: 300px; /* Max width for mobile */
-        height: auto; /* Maintain aspect ratio */
-        scroll-snap-align: start; /* Snap to the start of each image */
-        border-radius: 8px; /* Slightly rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        display: block; /* Show images */
+        position: absolute; /* Position for sliding */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Ensure images fit within the frame */
+        border-radius: 5px; /* Match other images */
+        opacity: 0; /* Hide by default, JavaScript will control visibility */
+        transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+    }
+
+    .family-yoga-carousel img.active {
+        opacity: 1; /* Show active image */
     }
 }
 

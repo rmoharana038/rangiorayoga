@@ -98,6 +98,31 @@ document.addEventListener('DOMContentLoaded', async function() {
         setInterval(changeVerticalImage, 3000); // Change image every 3 seconds
     }
 
+    // Family Yoga Slider (About Page)
+    const familyYogaCarousel = document.querySelector('.family-yoga-carousel');
+    if (familyYogaCarousel) {
+        const familyYogaImages = familyYogaCarousel.querySelectorAll('img');
+        let currentFamilyYogaIndex = 0;
+
+        function showFamilyYogaImage(index) {
+            familyYogaImages.forEach((img, i) => {
+                if (i === index) {
+                    img.classList.add('active');
+                } else {
+                    img.classList.remove('active');
+                }
+            });
+        }
+
+        // Show the first image initially
+        showFamilyYogaImage(currentFamilyYogaIndex);
+
+        setInterval(() => {
+            currentFamilyYogaIndex = (currentFamilyYogaIndex + 1) % familyYogaImages.length;
+            showFamilyYogaImage(currentFamilyYogaIndex);
+        }, 3000); // Change image every 3 seconds
+    }
+
     // Review Images Slider
     const reviewImageUrls = [
         "assets/images/review/review-1.png",
