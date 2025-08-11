@@ -813,6 +813,11 @@ h2 {
         margin-bottom: 0; /* Remove bottom margin to reduce gap to next section */
     }
 
+    .review-slider-container {
+        margin-top: 10px; /* Reduce space before the slider */
+        margin-bottom: 10px; /* Reduce space after the slider */
+    }
+
     .hero-text h1 {
         font-size: 28px; /* Reduced font size for mobile */
         margin-bottom: 5px; /* Reduced margin */
