@@ -710,21 +710,31 @@ h2 {
 
 /* Responsive Styles */
 .family-yoga-carousel {
-    display: block; /* Default to block for desktop */
-    overflow-x: hidden; /* Hide scrollbar on desktop */
+    display: block; /* Container for auto-slide */
+    overflow: hidden; /* Hide images outside the current view */
+    position: relative; /* For absolute positioning of images */
+    width: 100%;
+    max-width: 800px; /* Max width for the slider frame */
+    height: 500px; /* Fixed height for the slider frame */
+    margin: 0 auto; /* Center the slider */
 }
 
 .family-yoga-carousel img {
-    display: none; /* Hide all images by default on desktop */
+    display: none; /* Hide images by default */
+    position: absolute; /* Position for sliding */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure images fit within the frame */
+    border-radius: 5px; /* Match other images */
+    opacity: 0; /* Hide by default, JavaScript will control visibility */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
 }
 
-.family-yoga-carousel img:first-child {
-    display: block; /* Show only the first image on desktop */
-    width: 100%;
-    max-width: 800px;
-    height: 500px;
-    object-fit: cover;
-    margin: 0 auto;
+.family-yoga-carousel img.active {
+    display: block; /* Show active image */
+    opacity: 1; /* Show active image */
 }
 
 @media (max-width: 768px) {
