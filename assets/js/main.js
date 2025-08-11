@@ -124,4 +124,46 @@ document.addEventListener('DOMContentLoaded', async function() {
         setInterval(changeVerticalImage, 3000); // Change image every 3 seconds
     }
 
-    });
+    // Review Images Slider
+    const reviewImageUrls = [
+        "assets/images/review/review-1.png",
+        "assets/images/review/review-2.png",
+        "assets/images/review/review-3.png",
+        "assets/images/review/review-4.png",
+        "assets/images/review/review-5.png",
+        "assets/images/review/review-6.png",
+        "assets/images/review/review-7.png",
+        "assets/images/review/review-8.png",
+        "assets/images/review/review-9.png",
+        "assets/images/review/review-10.png",
+        "assets/images/review/review-11.png",
+        "assets/images/review/review-12.png",
+        "assets/images/review/review-13.png",
+        "assets/images/review/review-14.png",
+        "assets/images/review/review-15.png",
+        "assets/images/review/review-16.png",
+        "assets/images/review/review-17.png",
+        "assets/images/review/review-18.png",
+        "assets/images/review/review-19.png",
+        "assets/images/review/review-20.png",
+        "assets/images/review/review-21.png",
+        "assets/images/review/review-22.png",
+        "assets/images/review/review-23.png",
+        "assets/images/review/review-24.png",
+        "assets/images/review/review-25.png"
+    ];
+
+    const reviewImage = document.getElementById('review-image');
+    let currentReviewImageIndex = 0;
+
+    function changeReviewImage() {
+        if (reviewImage) {
+            reviewImage.src = reviewImageUrls[currentReviewImageIndex];
+            currentReviewImageIndex = (currentReviewImageIndex + 1) % reviewImageUrls.length;
+        }
+    }
+
+    if (reviewImage) {
+        setInterval(changeReviewImage, 3000); // Change image every 3 seconds
+    }
+});
