@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/service-worker.js')
                 .then(registration => {
-                    console.log('Service Worker registered: ', registration);
+                    // console.log('Service Worker registered: ', registration);
                 })
                 .catch(error => {
                     console.error('Service Worker registration failed: ', error);
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Family Yoga Slider (About Page)
     const familyYogaCarousel = document.querySelector('.family-yoga-carousel');
     if (familyYogaCarousel) {
-        console.log('Family Yoga Carousel found!'); // Added for debugging
+        // console.log('Family Yoga Carousel found!'); // Removed for production
         const familyYogaImages = familyYogaCarousel.querySelectorAll('img');
         let currentFamilyYogaIndex = 0;
 
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                     img.classList.remove('active');
                 }
             });
-            console.log('Showing image index:', index); // Added for debugging
+            // console.log('Showing image index:', index); // Removed for production
         }
 
         // Show the first image initially
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             showFamilyYogaImage(currentFamilyYogaIndex);
         }, 3000); // Change image every 3 seconds
     } else {
-        console.log('Family Yoga Carousel NOT found!'); // Added for debugging
+        // console.log('Family Yoga Carousel NOT found!'); // Removed for production
     }
 
     // Review Images Slider
