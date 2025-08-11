@@ -71,33 +71,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Testimonial Slider (Horizontal Images)
-    const imageUrls = [
-        "assets/images/studio/studio-1.png",
-        "assets/images/studio/studio-2.png",
-        "assets/images/studio/studio-3.png",
-        "assets/images/yoga/yoga-1.png",
-        "assets/images/yoga/yoga-2.png",
-        "assets/images/yoga/yoga-3.png",
-        "assets/images/yoga/yoga-4.png",
-        "assets/images/yoga/yoga-9.png",
-        "assets/images/yoga/yoga-11.png",
-        "assets/images/yoga/yoga-12.png"
-    ];
-
-    const testimonialImage = document.getElementById('testimonial-image');
-    let currentImageIndex = 0;
-
-    function changeImage() {
-        if (testimonialImage) {
-            testimonialImage.src = imageUrls[currentImageIndex];
-            currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-        }
-    }
-
-    if (testimonialImage) {
-        setInterval(changeImage, 3000); // Change image every 3 seconds
-    }
+    
 
     // Vertical Images Slider
     const verticalImageUrls = [
