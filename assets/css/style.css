@@ -804,7 +804,8 @@ h2 {
     }
 
     .contact-grid,
-    .about-grid {
+    .about-grid,
+    .why-yoga-grid { /* Added why-yoga-grid */
         grid-template-columns: 1fr;
     }
 
@@ -931,3 +932,5 @@ h2 {
     color: #555; /* A softer black */
     margin-bottom: 50px; /* Add margin bottom for spacing */
 }
+
+/* Added to force cache refresh */

@@ -169,4 +169,5 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (reviewImage) {
         setInterval(changeReviewImage, 3000); // Change image every 3 seconds
     }
+    // Added to force cache refresh
 });
