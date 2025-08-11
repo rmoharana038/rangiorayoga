@@ -1,0 +1,994 @@
+/*
+Theme Name: Rangiora Yoga Theme
+Author: Gemini
+Description: A custom theme for the Rangiora Yoga website, converted from a static HTML site.
+Version: 1.0
+*/
+
+:root {
+    --primary-blue: #007bff;
+    --primary-blue-dark: #0056b3;
+    --secondary-orange: #ff7f00;
+    --secondary-orange-dark: #cc6600;
+    --primary-green: #28a745;
+    --dark-orange: #CC5500; /* Darker orange */
+    --dark-green: #1E8449; /* Darker green */
+    --light-green: #90EE90; /* Light green color */
+    --text-dark: #333;
+    --text-light: #f8f9fa;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-light: #dee2e6;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --font-family-sans: 'Poppins', sans-serif; /* Using Poppins as a modern sans-serif */
+    --saffron-color: #FF9933;
+    --green-color: #138808;
+    --white-color: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #f2f2f2; /* Light gray background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center; /* Center align all text */
+    font-weight: bold; /* Make all text bold */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar */
+.site-header {
+    background-color: var(--bg-white);
+    padding: 5px 0; /* Reduced padding */
+    box-shadow: 0 2px 5px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    position: relative;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.main-navigation {
+    margin: 0 auto; /* Center navigation */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 50px; /* Adjusted to move logo downwards */
+    left: 15px;
+    z-index: 1001;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-family: var(--font-family-sans);
+}
+
+.logo img {
+    padding: 0;
+    margin: 0;
+    height: 90px; /* Increased size for the logo */
+}
+
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-navigation li {
+    margin-left: 30px;
+}
+
+.main-navigation a {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none; /* No underline by default */
+}
+
+.main-navigation a.active {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: underline; /* Underline for active item */
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none; /* Hidden by default, shown in media query */
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.menu-toggle .line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero Section */
+.hero {
+    /* background-image: url('../images/banner.jpg'); Removed as it will be handled by .page-hero */
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.4); Removed gray overlay */
+    z-index: -1;
+}
+
+.page-hero {
+    background-image: url('../images/banners/banner-1.png');
+    background-size: contain; /* Changed to contain */
+    background-repeat: no-repeat; /* Added */
+    background-position: right; /* Changed to right */
+    background-color: var(--bg-white); /* Added background color */
+    color: var(--text-light);
+    text-align: center;
+    padding: 50px 0; /* Adjusted padding */
+    min-height: 400px; /* Added min-height */
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Stronger shadow */
+    letter-spacing: 1.5px;
+    /* Color will be set by .saffron-text or other specific classes */
+}
+
+.saffron-text {
+    color: var(--saffron-color) !important;
+}
+
+.green-text {
+    color: var(--green-color) !important;
+}
+
+.hero-text p {
+    font-size: 28px; /* Increased font size */
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Stronger shadow for more pop */
+    text-align: center;
+    color: var(--light-green); /* Light green color for P */
+}
+
+.highlight-text {
+    color: var(--secondary-orange);
+}
+
+.blue-highlight {
+    color: var(--primary-blue) !important;
+}
+
+.divider {
+    background-color: var(--white-color);
+    height: 8px;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 50px; /* Pill style */
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.btn:hover {
+    background-color: var(--primary-blue-dark);
+    text-decoration: none;
+}
+
+/* General Section Styling */
+h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Classes Section
+--------------------------------------------------------------*/
+.classes-section {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.class-card {
+    background-color: #333; /* Dark background */
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #555; /* Darker border */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 8px 20px rgba(255, 255, 255, 0.15); /* Blue LED glow + existing shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.class-card h3 {
+    color: var(--text-light); /* Light text for headings */
+}
+
+.class-card h3.highlight-text {
+    color: var(--secondary-orange); /* Highlight color for headings in class cards */
+}
+
+.class-card p {
+    color: var(--text-light); /* Light text for paragraphs */
+}
+
+.class-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Adjust opacity as needed */
+    z-index: -1;
+}
+
+.class-card i,
+.class-card .yoga-icon {
+    font-size: 40px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    width: 40px; /* Ensure consistent size for images */
+    height: 40px; /* Ensure consistent size for images */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.class-card:hover {
+    transform: translateY(-10px);
+}
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials-section {
+    padding: 80px 0;
+}
+
+.review-slider-container {
+    width: 100%;
+    max-width: 800px; /* Same as horizontal slider */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#review-image {
+    width: 100%;
+    height: 500px; /* Fixed height */
+    object-fit: contain; /* Ensure images are not cropped */
+    border-radius: 5px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonial-card {
+    background-color: #333; /* Dark background */
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #555; /* Darker border */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 8px 20px rgba(255, 255, 255, 0.15); /* Blue LED glow + existing shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.testimonial-card p,
+.testimonial-card cite {
+    color: var(--text-light); /* Light text for paragraphs and cite */
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Adjust opacity as needed */
+    z-index: -1;
+}
+
+.testimonial-card i {
+    font-size: 40px;
+    color: var(--secondary-orange);
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-card cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+.contact-hero {
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
+    text-align: center;
+    padding: 80px 0;
+}
+
+.contact-section {
+    padding: 80px 0;
+    text-align: center; /* Added for centering content */
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+}
+
+/*--------------------------------------------------------------
+# Classes Page
+--------------------------------------------------------------*/
+.classes-hero {
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
+    text-align: center;
+    padding: 80px 0;
+}
+
+.classes-page-section {
+    padding: 80px 0;
+}
+
+.classes-page-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures rounded corners are visible */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
+}
+
+.classes-page-section th,
+.classes-page-section td {
+    border: 1px solid var(--border-light);
+    padding: 15px; /* Increased padding */
+    text-align: center; /* Center align text */
+}
+
+.classes-page-section th {
+    background-color: var(--primary-blue); /* Primary blue background */
+    color: var(--text-light); /* White text */
+    font-weight: 700; /* Bold font */
+    font-size: 18px; /* Larger font size */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.classes-page-section tr:nth-child(even) {
+    background-color: #f8f9fa; /* Zebra striping */
+}
+
+.classes-page-section tr:hover {
+    background-color: #e9ecef; /* Hover effect */
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+.about-hero {
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
+    text-align: center;
+    padding: 80px 0;
+}
+
+.about-content {
+    padding: 80px 0;
+}
+
+.about-text p {
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+}
+
+.about-text p:last-child {
+    margin-bottom: 0; /* No margin after the last paragraph */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*--------------------------------------------------------------
+# Why Yoga Page
+--------------------------------------------------------------*/
+.why-yoga-hero {
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
+    text-align: center;
+    padding: 80px 0;
+}
+
+.why-yoga-content {
+    padding: 80px 0;
+}
+
+.why-yoga-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.why-yoga-column h2 {
+    text-align: left;
+}
+
+.why-yoga-column ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.why-yoga-column ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.why-yoga-column ul li i {
+    color: var(--primary-green);
+    margin-right: 10px;
+}
+
+.why-yoga-column p {
+    text-align: left;
+}
+
+/* Testimonial Slider Section */
+.testimonial-slider-section {
+    padding: 80px 0;
+}
+
+.single-image-slider-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#testimonial-image {
+    width: 100%;
+    height: 500px; /* Set a fixed height */
+    object-fit: cover; /* Crop the image to fit the container */
+    border-radius: 5px;
+}
+
+.private-sessions-section .container {
+    max-width: 900px; /* Adjust container width for better readability */
+}
+
+.private-sessions-content {
+    text-align: left; /* Align text to the left within the content block */
+    margin-top: 30px;
+}
+
+.private-sessions-content h3 {
+    color: var(--primary-blue-dark);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: left;
+}
+
+.private-sessions-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.private-sessions-content ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.private-sessions-content ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.private-sessions-content ul li::before {
+    content: '\f00c'; /* FontAwesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary-green);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.private-sessions-content strong {
+    color: var(--primary-blue);
+}
+
+/*--------------------------------------------------------------
+# Pricing Page
+--------------------------------------------------------------*/
+.pricing-hero {
+    /* background-color: var(--bg-light); Removed as it's handled by .page-hero */
+    text-align: center;
+    padding: 80px 0;
+}
+
+.pricing-section {
+    padding: 80px 0;
+}
+
+.pricing-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Align list items to the left */
+    margin-bottom: 20px;
+}
+
+.pricing-section li {
+    margin-bottom: 15px; /* Increased space between list items */
+    padding: 10px;
+    background-color: #f8f8f8; /* Light background for each item */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary-blue); /* Accent border */
+}
+
+.pricing-section li strong {
+    color: var(--primary-blue); /* Highlight strong text */
+}
+
+.pricing-section ul ul {
+    margin-top: 10px;
+    margin-left: 20px; /* Indent nested lists */
+    list-style: disc; /* Use disc for nested lists */
+}
+
+.pricing-section ul ul li {
+    background-color: transparent; /* No background for nested items */
+    box-shadow: none;
+    border-left: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.pricing-content {
+    text-align: left; /* Ensure content within this div is left-aligned */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content block */
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.site-footer .container {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Vertically center items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.social-links {
+    display: flex; /* Use flexbox for social icons */
+    align-items: center; /* Vertically center icons */
+    justify-content: center; /* Horizontally center icons */
+}
+
+.social-links a {
+    margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+#scroll-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 99; /* High z-index to be on top */
+    width: 50px; /* Circular button size */
+    height: 50px; /* Circular button size */
+    border-radius: 50%; /* Make it circular */
+    background-color: var(--primary-blue); /* Background color */
+    color: var(--text-light); /* Arrow color */
+    text-align: center; /* Center the arrow */
+    line-height: 50px; /* Vertically center the arrow */
+    font-size: 24px; /* Arrow size */
+    cursor: pointer; /* Pointer on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#scroll-to-top-btn:hover {
+    background-color: var(--primary-blue-dark);
+}
+
+/* Responsive Styles */
+.family-yoga-carousel {
+    display: block; /* Container for auto-slide */
+    overflow: hidden; /* Hide images outside the current view */
+    position: relative; /* For absolute positioning of images */
+    width: 100%;
+    max-width: 800px; /* Max width for the slider frame */
+    height: 500px; /* Fixed height for the slider frame */
+    margin: 0 auto; /* Center the slider */
+}
+
+.family-yoga-carousel img {
+    display: none; /* Hide images by default */
+    position: absolute; /* Position for sliding */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure images fit within the frame */
+    border-radius: 5px; /* Match other images */
+    opacity: 0; /* Hide by default, JavaScript will control visibility */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+}
+
+.family-yoga-carousel img.active {
+    display: block; /* Show active image */
+    opacity: 1; /* Show active image */
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px 0; /* Reduced vertical padding for all sections on smaller screens */
+    }
+
+    .site-header .container {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-between; /* Space out logo and menu toggle */
+        align-items: center; /* Center vertically */
+        padding: 10px 15px; /* Adjust header padding */
+    }
+
+    .logo {
+        position: static; /* Remove absolute positioning */
+        top: auto;
+        left: auto;
+        text-align: left; /* Align logo to the left */
+        width: auto; /* Adjust width */
+        padding: 0; /* Remove padding */
+    }
+
+    .logo img {
+        height: 35px; /* Adjust logo size for mobile */
+    }
+
+    .main-navigation {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        right: 0;
+        width: 50%;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 20px 0;
+        border-top: none;
+        z-index: 999; /* Added z-index */
+    }
+
+    .main-navigation.toggled {
+        display: flex; /* Show when active */
+    }
+
+    .main-navigation ul {
+        flex-direction: column; /* Ensure vertical stacking */
+        width: 100%; /* Ensure full width */
+        align-items: flex-end;
+    }
+
+    .main-navigation li {
+        margin: 2px 0 2px auto; /* Adjusted margin to push to right and reduce vertical space */
+        background-color: black;
+        border-radius: 20px;
+        padding: 5px 10px; /* Reduced padding */
+        width: auto; /* Allow item to shrink to content */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger on mobile */
+        position: absolute; /* Position absolutely within the header */
+        right: 15px; /* Align to the right */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        z-index: 1002; /* Higher z-index than navigation */
+    }
+
+    .contact-grid,
+    .about-grid,
+    .why-yoga-grid { /* Added why-yoga-grid */
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer .container {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .social-links {
+        margin-bottom: 0; /* Remove bottom margin */
+        margin-right: 15px; /* Add space between icons and text */
+    }
+
+    .site-footer p {
+        margin: 0; /* Remove default margin */
+    }
+
+    .page-hero {
+        background-image: url('../images/banners/banner-3.png');
+        background-size: contain; /* Changed to contain */
+        background-position: right center; /* Changed to right center */
+        background-repeat: no-repeat;
+        padding: 50px 0; /* Adjusted padding for mobile hero */
+        min-height: 200px; /* Added min-height for mobile */
+    }
+
+    .hero {
+        /* background-image: url('../images/banner_mob.jpg'); Removed as it will be handled by .page-hero */
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 0;
+    }
+
+    .family-yoga-carousel {
+        display: block; /* Change to block for auto-slide */
+        overflow: hidden; /* Hide images outside the current view */
+        position: relative; /* For absolute positioning of images */
+        width: 100%;
+        max-width: 800px; /* Match desktop max-width for consistency */
+        height: 500px; /* Fixed height for the slider frame */
+        margin: 0 auto; /* Center the slider */
+    }
+
+    .family-yoga-carousel img {
+        display: none; /* Hide images by default */
+        position: absolute; /* Position for sliding */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Ensure images fit within the frame */
+        border-radius: 5px; /* Match other images */
+        opacity: 0; /* Hide by default, JavaScript will control visibility */
+        transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+    }
+
+    .family-yoga-carousel img.active {
+        display: block; /* Show active image */
+        opacity: 1; /* Show active image */
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 20px 0; /* Further reduced vertical padding for all sections on very small screens */
+    }
+
+    .testimonials-section {
+        margin-bottom: 0; /* Remove bottom margin to reduce gap to next section */
+    }
+
+    .review-slider-container {
+        margin-top: 0; /* Further reduce space before the slider */
+        margin-bottom: 0; /* Further reduce space after the slider */
+    }
+
+    .hero-text h1 {
+        font-size: 28px; /* Reduced font size for mobile */
+        margin-bottom: 5px; /* Reduced margin */
+    }
+    .hero-text p {
+        font-size: 14px; /* Reduced font size for mobile */
+        margin: 5px auto 15px auto; /* Reduced margin */
+    }
+    .divider {
+        width: 80%; /* Make it stretch more */
+        margin: 5px auto; /* Reduced margin */
+    }
+    .class-grid,
+    .testimonial-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .classes-page-section table {
+        font-size: 14px;
+    }
+    .classes-page-section th,
+    .classes-page-section td {
+        padding: 5px;
+    }
+}
+
+/* Vertical Slider Section */
+.vertical-slider-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.vertical-image-slider-container {
+    width: 100%;
+    max-width: 800px; /* Same as horizontal slider */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#vertical-testimonial-image {
+    width: 100%;
+    height: 500px; /* Fixed height */
+    object-fit: contain; /* Ensure images are not cropped */
+    border-radius: 5px;
+}
+
+.copyright-text {
+    text-align: center;
+    width: 100%; /* Ensure it takes full width to center properly */
+}
+
+.professional-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555; /* A softer black */
+    margin-bottom: 50px; /* Add margin bottom for spacing */
+}
+
+/* Added to force cache refresh */
