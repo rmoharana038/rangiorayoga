@@ -152,7 +152,7 @@ main {
 
 /* Hero Section */
 .hero {
-    background-image: url('../images/banner.jpg');
+    /* background-image: url('../images/banner.jpg'); Removed as it will be handled by .page-hero */
     background-size: cover;
     background-position: center;
     color: var(--text-light);
@@ -171,6 +171,17 @@ main {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
     z-index: -1;
+}
+
+.page-hero {
+    background-image: url('../images/banners/banner-1.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text h1 {
@@ -840,8 +851,16 @@ h2 {
         margin: 0; /* Remove default margin */
     }
 
+    .page-hero {
+        background-image: url('../images/banners/banner-3.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 0; /* Adjust padding for mobile hero */
+    }
+
     .hero {
-        background-image: url('../images/banner_mob.jpg');
+        /* background-image: url('../images/banner_mob.jpg'); Removed as it will be handled by .page-hero */
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
