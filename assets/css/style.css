@@ -832,7 +832,7 @@ h2 {
     }
 
     .family-yoga-carousel img {
-        display: block; /* Show images */
+        display: none; /* Hide images by default */
         position: absolute; /* Position for sliding */
         top: 0;
         left: 0;
@@ -845,6 +845,7 @@ h2 {
     }
 
     .family-yoga-carousel img.active {
+        display: block; /* Show active image */
         opacity: 1; /* Show active image */
     }
 }
